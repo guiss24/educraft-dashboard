@@ -42,37 +42,37 @@ const Index = () => {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-gray-50">
       <DashboardSidebar />
       
-      <main className="flex-1 p-4 md:p-8 animate-fadeIn w-full">
+      <main className="flex-1 p-8 animate-fadeIn">
         <div className="max-w-7xl mx-auto">
-          <header className="mb-6 md:mb-8">
-            <div className="flex flex-col md:flex-row md:items-center md:space-x-4">
-              <div className="w-12 h-12 rounded-full bg-teaching-300 flex items-center justify-center mb-4 md:mb-0">
+          <header className="mb-8">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 rounded-full bg-teaching-300 flex items-center justify-center">
                 <span className="text-white text-lg font-semibold">MP</span>
               </div>
               <div>
-                <h1 className="text-xl md:text-2xl font-semibold text-gray-800">
+                <h1 className="text-2xl font-semibold text-gray-800">
                   Bem-vindo(a), Professor(a)
                 </h1>
-                <p className="text-sm md:text-base text-gray-600">
+                <p className="text-gray-600">
                   Terça-feira, 12 de Março de 2024
                 </p>
               </div>
             </div>
           </header>
 
-          <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
+          <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {quickStats.map((stat) => (
               <Card
                 key={stat.label}
-                className={`p-4 md:p-6 ${stat.color} border-none animate-slideIn`}
+                className={`p-6 ${stat.color} border-none animate-slideIn`}
               >
                 <div className="flex items-start justify-between">
                   <div>
-                    <p className="text-xs md:text-sm text-gray-600">{stat.label}</p>
-                    <p className="text-xl md:text-2xl font-semibold mt-1 text-gray-800">
+                    <p className="text-sm text-gray-600">{stat.label}</p>
+                    <p className="text-2xl font-semibold mt-1 text-gray-800">
                       {stat.value}
                     </p>
                   </div>
@@ -86,34 +86,34 @@ const Index = () => {
             ))}
           </section>
 
-          <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-            <Card className="p-4 md:p-6">
-              <div className="flex items-center justify-between mb-4 md:mb-6">
-                <h2 className="text-base md:text-lg font-semibold text-gray-800">
+          <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <Card className="p-6">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-lg font-semibold text-gray-800">
                   Próximas Aulas
                 </h2>
-                <button className="text-xs md:text-sm text-teaching-300 hover:underline">
+                <button className="text-sm text-teaching-300 hover:underline">
                   Ver todas
                 </button>
               </div>
-              <div className="space-y-3 md:space-y-4">
+              <div className="space-y-4">
                 {[1, 2, 3].map((_, i) => (
                   <div
                     key={i}
-                    className="flex items-center justify-between p-3 md:p-4 bg-gray-50 rounded-lg"
+                    className="flex items-center justify-between p-4 bg-gray-50 rounded-lg"
                   >
-                    <div className="flex items-center space-x-3 md:space-x-4">
-                      <div className="w-1 md:w-2 h-12 bg-teaching-300 rounded-full" />
+                    <div className="flex items-center space-x-4">
+                      <div className="w-2 h-12 bg-teaching-300 rounded-full" />
                       <div>
-                        <p className="text-sm md:text-base font-medium text-gray-800">
+                        <p className="font-medium text-gray-800">
                           Matemática - 9º Ano A
                         </p>
-                        <p className="text-xs md:text-sm text-gray-600">
+                        <p className="text-sm text-gray-600">
                           08:00 - 09:30 • Sala 12
                         </p>
                       </div>
                     </div>
-                    <button className="text-xs md:text-sm text-teaching-300 hover:underline">
+                    <button className="text-sm text-teaching-300 hover:underline">
                       Detalhes
                     </button>
                   </div>
@@ -121,24 +121,24 @@ const Index = () => {
               </div>
             </Card>
 
-            <Card className="p-4 md:p-6">
-              <div className="flex items-center justify-between mb-4 md:mb-6">
-                <h2 className="text-base md:text-lg font-semibold text-gray-800">
+            <Card className="p-6">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-lg font-semibold text-gray-800">
                   Atividades Pendentes
                 </h2>
-                <button className="text-xs md:text-sm text-teaching-300 hover:underline">
+                <button className="text-sm text-teaching-300 hover:underline">
                   Ver todas
                 </button>
               </div>
-              <div className="space-y-3 md:space-y-4">
+              <div className="space-y-4">
                 {[1, 2, 3].map((_, i) => (
                   <div
                     key={i}
-                    className="flex items-center justify-between p-3 md:p-4 bg-gray-50 rounded-lg"
+                    className="flex items-center justify-between p-4 bg-gray-50 rounded-lg"
                   >
-                    <div className="flex items-center space-x-3 md:space-x-4">
+                    <div className="flex items-center space-x-4">
                       <div
-                        className={`w-1 md:w-2 h-12 rounded-full ${
+                        className={`w-2 h-12 rounded-full ${
                           i === 0
                             ? "bg-red-400"
                             : i === 1
@@ -147,15 +147,15 @@ const Index = () => {
                         }`}
                       />
                       <div>
-                        <p className="text-sm md:text-base font-medium text-gray-800">
+                        <p className="font-medium text-gray-800">
                           Corrigir Provas - 7º Ano B
                         </p>
-                        <p className="text-xs md:text-sm text-gray-600">
+                        <p className="text-sm text-gray-600">
                           Vence em 2 dias • 25 alunos
                         </p>
                       </div>
                     </div>
-                    <button className="text-xs md:text-sm text-teaching-300 hover:underline">
+                    <button className="text-sm text-teaching-300 hover:underline">
                       Iniciar
                     </button>
                   </div>
