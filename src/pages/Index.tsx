@@ -45,7 +45,7 @@ const Index = () => {
     <div className="flex min-h-screen bg-gray-50">
       <DashboardSidebar />
       
-      <main className="flex-1 p-8 animate-fadeIn">
+      <main className="flex-1 p-8 mt-16 lg:mt-0 animate-fadeIn">
         <div className="max-w-7xl mx-auto">
           <header className="mb-8">
             <div className="flex items-center space-x-4">

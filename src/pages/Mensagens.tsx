@@ -31,9 +31,9 @@ const Mensagens = () => {
   return (
     <div className="flex min-h-screen bg-gray-50">
       <DashboardSidebar />
-      <main className="flex-1 flex">
-        <div className="w-1/3 border-r bg-white">
-          <div className="p-4 border-b">
+      <main className="flex-1 flex mt-16 lg:mt-0">
+        <div className="w-full lg:w-1/3 border-r bg-white">
+          <div className="p-4 border-b sticky top-16 lg:top-0 bg-white z-10">
             <div className="relative">
               <Search
                 size={20}
@@ -47,7 +47,7 @@ const Mensagens = () => {
             </div>
           </div>
 
-          <div className="overflow-y-auto h-[calc(100vh-5rem)]">
+          <div className="overflow-y-auto h-[calc(100vh-9rem)] lg:h-[calc(100vh-5rem)]">
             {conversas.map((conversa, index) => (
               <div
                 key={index}
@@ -73,7 +73,7 @@ const Mensagens = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col bg-gray-50">
+        <div className="hidden lg:flex flex-1 flex-col bg-gray-50">
           <div className="p-4 bg-white border-b">
             <div className="flex items-center space-x-4">
               <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
@@ -121,6 +121,17 @@ const Mensagens = () => {
                 <Send size={20} />
               </button>
             </div>
+          </div>
+        </div>
+
+        <div className="hidden lg:hidden flex-1 flex items-center justify-center bg-gray-50">
+          <div className="text-center p-8">
+            <h3 className="text-lg font-medium text-gray-800 mb-2">
+              Selecione uma conversa
+            </h3>
+            <p className="text-gray-600">
+              Escolha uma conversa para visualizar as mensagens
+            </p>
           </div>
         </div>
       </main>

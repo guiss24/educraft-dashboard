@@ -33,33 +33,35 @@ const Relatorios = () => {
   return (
     <div className="flex min-h-screen bg-gray-50">
       <DashboardSidebar />
-      <main className="flex-1 p-8">
+      <main className="flex-1 p-4 lg:p-8 mt-16 lg:mt-0">
         <div className="max-w-7xl mx-auto">
-          <header className="mb-8 flex justify-between items-center">
-            <div>
-              <h1 className="text-2xl font-semibold text-gray-800">Relatórios</h1>
-              <p className="text-gray-600">
-                Análise de desempenho e frequência
-              </p>
-            </div>
-            <div className="flex space-x-4">
-              <button className="flex items-center space-x-2 px-4 py-2 bg-white rounded-lg border hover:bg-gray-50">
-                <Filter size={16} />
-                <span>Filtrar</span>
-              </button>
-              <button className="flex items-center space-x-2 px-4 py-2 bg-teaching-300 text-white rounded-lg hover:bg-teaching-400">
-                <Download size={16} />
-                <span>Exportar</span>
-              </button>
+          <header className="mb-6 lg:mb-8">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+              <div>
+                <h1 className="text-2xl font-semibold text-gray-800">Relatórios</h1>
+                <p className="text-gray-600">
+                  Análise de desempenho e frequência
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <button className="flex items-center justify-center space-x-2 px-4 py-2 bg-white rounded-lg border hover:bg-gray-50 w-full lg:w-auto">
+                  <Filter size={16} />
+                  <span>Filtrar</span>
+                </button>
+                <button className="flex items-center justify-center space-x-2 px-4 py-2 bg-teaching-300 text-white rounded-lg hover:bg-teaching-400 w-full lg:w-auto">
+                  <Download size={16} />
+                  <span>Exportar</span>
+                </button>
+              </div>
             </div>
           </header>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            <Card className="p-6">
-              <h2 className="text-lg font-medium text-gray-800 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 mb-4 lg:mb-8">
+            <Card className="p-4 lg:p-6">
+              <h2 className="text-lg font-medium text-gray-800 mb-4 lg:mb-6">
                 Média por Turma
               </h2>
-              <div className="h-80">
+              <div className="h-60 lg:h-80">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={desempenhoData}>
                     <CartesianGrid strokeDasharray="3 3" />
@@ -72,11 +74,11 @@ const Relatorios = () => {
               </div>
             </Card>
 
-            <Card className="p-6">
-              <h2 className="text-lg font-medium text-gray-800 mb-6">
+            <Card className="p-4 lg:p-6">
+              <h2 className="text-lg font-medium text-gray-800 mb-4 lg:mb-6">
                 Taxa de Presença
               </h2>
-              <div className="h-80">
+              <div className="h-60 lg:h-80">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie
@@ -103,11 +105,11 @@ const Relatorios = () => {
             </Card>
           </div>
 
-          <Card className="p-6">
-            <h2 className="text-lg font-medium text-gray-800 mb-6">
+          <Card className="p-4 lg:p-6">
+            <h2 className="text-lg font-medium text-gray-800 mb-4 lg:mb-6">
               Relatórios Disponíveis
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-3 lg:space-y-4">
               {[
                 "Desempenho por Turma",
                 "Frequência Mensal",
@@ -116,10 +118,10 @@ const Relatorios = () => {
               ].map((relatorio, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-between p-4 bg-gray-50 rounded-lg"
+                  className="flex items-center justify-between p-3 lg:p-4 bg-gray-50 rounded-lg"
                 >
                   <span className="text-gray-700">{relatorio}</span>
-                  <button className="text-sm text-teaching-300 hover:underline">
+                  <button className="text-sm text-teaching-300 hover:underline whitespace-nowrap">
                     Gerar Relatório
                   </button>
                 </div>
