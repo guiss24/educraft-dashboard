@@ -31,7 +31,7 @@ const Turmas = () => {
   return (
     <div className="flex min-h-screen bg-gray-50">
       <DashboardSidebar />
-      <main className="flex-1 p-8">
+      <main className="flex-1 p-8 lg:p-8 mt-16 lg:mt-0">
         <div className="max-w-7xl mx-auto">
           <header className="mb-8 flex justify-between items-center">
             <div>
