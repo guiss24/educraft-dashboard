@@ -10,6 +10,7 @@ import Diario from "./pages/Diario";
 import Calendario from "./pages/Calendario";
 import Relatorios from "./pages/Relatorios";
 import Mensagens from "./pages/Mensagens";
+import Configuracoes from "./pages/Configuracoes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/calendario" element={<Calendario />} />
           <Route path="/relatorios" element={<Relatorios />} />
           <Route path="/mensagens" element={<Mensagens />} />
+          <Route path="/configuracoes" element={<Configuracoes />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
